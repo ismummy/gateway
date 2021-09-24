@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express')
 const setLogging = require('./utils/logging')
 const routes = require("./utils/routes")

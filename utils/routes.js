@@ -2,7 +2,7 @@ const ROUTES = [
     {
         url: '/search',
         proxy: {
-            target: "http://localhost:6000",
+            target: process.env.SEARCH_SERVICE,
             changeOrigin: true,
             pathRewrite: {
                 [`^/search`]: '',
@@ -12,7 +12,7 @@ const ROUTES = [
     {
         url: '/logger',
         proxy: {
-            target: "http://localhost:5000",
+            target: process.env.LOGGER_SERVICE,
             changeOrigin: true,
             pathRewrite: {
                 [`^/logger`]: '',
