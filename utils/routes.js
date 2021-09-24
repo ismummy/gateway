@@ -1,21 +1,21 @@
 const ROUTES = [
     {
-        url: '/service1',
+        url: '/search',
         proxy: {
-            target: "https://jsonplaceholder.typicode.com/posts",
+            target: "http://localhost:6000",
             changeOrigin: true,
             pathRewrite: {
-                [`^/service1`]: '',
+                [`^/search`]: '',
             },
         }
     },
     {
-        url: '/service2',
+        url: '/logger',
         proxy: {
-            target: "https://www.google.com",
+            target: "http://localhost:5000",
             changeOrigin: true,
             pathRewrite: {
-                [`^/service1`]: '',
+                [`^/logger`]: '',
             },
         }
     }
